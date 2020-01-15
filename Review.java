@@ -165,4 +165,23 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+  
+  public static double totalSentiment(String fileName)
+  {
+     String content = Review.textToString(fileName);
+     double sv = 0.0;
+     
+     String word = "";
+     for (int i = 0; i < content.length(); i++)
+     {
+        char c = content.charAt(i);
+        if (!Character.isLetterOrDigit(c))
+        {
+           sv += sentimentVal(word);
+           word = "";
+        }
+        else word += c;
+     }
+     return sv;
+  }
 }
