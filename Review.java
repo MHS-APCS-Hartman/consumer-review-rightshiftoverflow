@@ -184,4 +184,9 @@ public class Review {
      }
      return sv;
   }
+  
+  public static int starRating(String fileName)
+  {
+     return (int)(2.5*Math.tanh(Review.totalSentiment(fileName))+3);
+  }
 }
