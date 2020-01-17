@@ -218,4 +218,28 @@ public class Review {
   
 		return content;
 	}
+	
+	public static String fakeReviewWeaker(String fileName)
+	{
+		String content = Review.textToString(fileName);
+  
+		for (int i = 0; i < content.length(); i++)
+		{
+			if (content.charAt(i) == '*')
+			{
+				int s = i;
+				int e;
+				while (true)
+				{
+					i++;
+					if (content.charAt(i) == ' ') break;
+				}
+				e = i;
+		
+				content = content.substring(0, s) + randomAdjective() + content.substring(e);
+			}
+		}
+  
+		return content;
+	}
 }
