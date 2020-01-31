@@ -204,7 +204,7 @@ public class Review {
 				while (true)
 				{
 					i++;
-					if (content.charAt(i) == ' ') break;
+					if (!Character.isLetterOrDigit(content.charAt(i))) break;
 				}
 				e = i;
 		
@@ -232,7 +232,7 @@ public class Review {
 				while (true)
 				{
 					i++;
-					if (content.charAt(i) == ' ') break;
+					if (!Character.isLetterOrDigit(content.charAt(i))) break;
 				}
 				e = i;
 		
