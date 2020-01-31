@@ -190,7 +190,7 @@ public class Review {
 		return (int)(2.5*Math.tanh(Review.totalSentiment(fileName))+3);
 	}
   
-	public static String fakeReview(String fileName)
+	public static String fakeReviewStronger(String fileName)
 	{
 		String content = Review.textToString(fileName);
   
@@ -219,7 +219,7 @@ public class Review {
 		return content;
 	}
 	
-	public static String fakeReviewWeaker(String fileName)
+	public static String fakeReview(String fileName)
 	{
 		String content = Review.textToString(fileName);
   
